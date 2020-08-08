@@ -3,7 +3,7 @@ sercices:
     - docker
 
 before_install:
-    - docker build -t gavinxu/react-test - f /client/Dockerfile.dev
+    - docker build -t gavinxu/react-test - f /client/Dockerfile.dev ./client
 
 script:
     - docker run -e CI=true gavinxu/react-test run test
